@@ -57,7 +57,7 @@ class Nokia extends Phone {
 // Function to display phone information
 function displayPhoneInfo(phones: Phone[]): void {
     phones.forEach(phone => {
-        console.log(phone.describe());
+        console.log(`${phone.describe()}\n`);
     });
 }
 
