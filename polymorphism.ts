@@ -1,11 +1,11 @@
-// Abstract class Phone
+// Polymorphism Demo
 abstract class Phone {
     abstract call(number: string): string; // Abstract method for calling
     abstract camera(): string; // Abstract method for camera functionality
     abstract getModel(): string; // Abstract method to get the model name
 
     describe(): string {
-        return `${this.getModel()} - ${this.call("123-456-7890")} | Camera: ${this.camera()}`;
+        return `${this.getModel()} - ${this.call("+84 869 366 634")} | Camera: ${this.camera()}`;
     }
 }
 
@@ -20,7 +20,7 @@ class iPhone extends Phone {
     }
 
     getModel(): string {
-        return "iPhone 14 Pro";
+        return "iPhone XX Ultra Plus Pro Max";
     }
 }
 
@@ -35,7 +35,7 @@ class Samsung extends Phone {
     }
 
     getModel(): string {
-        return "Samsung Galaxy S22 Ultra";
+        return "Samsung Galaxy S30 Ultimate";
     }
 }
 
@@ -50,7 +50,7 @@ class Nokia extends Phone {
     }
 
     getModel(): string {
-        return "Nokia G50";
+        return "Nokia G0D Unbreakable";
     }
 }
 

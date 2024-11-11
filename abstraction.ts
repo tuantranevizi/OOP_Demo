@@ -1,4 +1,4 @@
-// Abstract Shape class
+// Abstraction Demo
 abstract class Shape {
     // Abstract methods to be implemented by derived classes
     abstract calculateArea(): number;

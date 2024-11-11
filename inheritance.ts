@@ -1,3 +1,5 @@
+// Inheritance Demo
+
 // Base class (Parent class)
 class Animal {
     constructor(public name: string) { }
