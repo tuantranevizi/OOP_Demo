@@ -43,7 +43,7 @@ class Rectangle extends Shape {
 
 // Square class extending Shape
 class Square extends Shape {
-    constructor(private side: number){
+    constructor(private side: number) {
         super();
     }
     // Implementing the abstract method
@@ -56,12 +56,52 @@ class Square extends Shape {
     }
 }
 
-// Setup
+// Triangle class extending Shape
+class Triangle extends Shape {
+    constructor(private base: number, private height: number, private sideA: number, private sideB: number) {
+        super();
+    }
+
+    // Implementing the abstract methods
+    calculateArea(): number {
+        return (this.base * this.height) / 2;
+    }
+
+    calculatePerimeter(): number {
+        return this.base + this.sideA + this.sideB;
+    }
+}
+
+// Trapezoid class extending Shape
+class Trapezoid extends Shape {
+    constructor(private base1: number, private base2: number, private height: number, private sideA: number, private sideB: number) {
+        super();
+    }
+
+    // Implementing the abstract methods
+    calculateArea(): number {
+        return ((this.base1 + this.base2) * this.height) / 2;
+    }
+
+    calculatePerimeter(): number {
+        return this.base1 + this.base2 + this.sideA + this.sideB;
+    }
+}
+
+// Initialize instances
 const myCircle = new Circle(5);
 console.log(myCircle.describe()); // This is a shape with area 78.54 and perimeter 31.42.
+console.log(`This shape area is: ${myCircle.calculateArea()}`) // This shape area is : 78.54
+console.log(`This shape perimeter is: ${myCircle.calculatePerimeter()}`) // This shape perimeter is: 31.42
 
 const myRectangle = new Rectangle(10, 5);
-console.log(`This shape area is: ${myRectangle.calculateArea()}`); // This is a shape with area 50 and perimeter 30.
+console.log(myRectangle.describe()); // This is a shape with area 50 and perimeter 30.
 
 const mySquare = new Square(10);
 console.log(mySquare.describe()) // This is a shape with area 100 and perimeter 40.
+
+const myTriangle = new Triangle(10, 5, 7, 8);
+console.log(myTriangle.describe()); // This is a shape with area 25.00 and perimeter 25.00.
+
+const myTrapezoid = new Trapezoid(10, 5, 4, 6, 6);
+console.log(myTrapezoid.describe()); // This is a shape with area 30.00 and perimeter 27.00.
