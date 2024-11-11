@@ -41,9 +41,27 @@ class Rectangle extends Shape {
     }
 }
 
-// Usage
+// Square class extending Shape
+class Square extends Shape {
+    constructor(private side: number){
+        super();
+    }
+    // Implementing the abstract method
+    calculateArea(): number {
+        return this.side * this.side;
+    }
+
+    calculatePerimeter(): number {
+        return this.side * 4;
+    }
+}
+
+// Setup
 const myCircle = new Circle(5);
 console.log(myCircle.describe()); // This is a shape with area 78.54 and perimeter 31.42.
 
 const myRectangle = new Rectangle(10, 5);
-console.log(myRectangle.describe()); // This is a shape with area 50 and perimeter 30.
+console.log(`This shape area is: ${myRectangle.calculateArea()}`); // This is a shape with area 50 and perimeter 30.
+
+const mySquare = new Square(10);
+console.log(mySquare.describe()) // This is a shape with area 100 and perimeter 40.
