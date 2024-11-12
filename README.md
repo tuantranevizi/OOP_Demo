@@ -1,17 +1,15 @@
 # OOP_Demo
-
-##  Practice writing 4 types of OOP using TypeScript
-
 ### To get started with the abstraction example, follow these steps:
 
-Clone the repository:
+**Clone the repository:**
 
 ```bash
     git clone https://github.com/ttuan-evizi/OOP_Demo.git
     cd OOP_Demo
 ```
 
-Install dependencies: 
+**Install dependencies:**
+
 Make sure you have Node.js installed, then run:
 
 bash
