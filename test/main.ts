@@ -7,8 +7,8 @@ import { Trapezoid } from './Trapezoid';
 // Initialize instances
 const myCircle = new Circle(5);
 console.log(myCircle.describe());
-console.log(`This shape area is: ${myCircle.calculateArea()}`);
-console.log(`This shape perimeter is: ${myCircle.calculatePerimeter()}`);
+console.log(`This shape area is: ${myCircle.calculateArea().toFixed(2)}`);
+console.log(`This shape perimeter is: ${myCircle.calculatePerimeter().toFixed(2)}`);
 
 const myRectangle = new Rectangle(10, 5);
 console.log(myRectangle.describe());
