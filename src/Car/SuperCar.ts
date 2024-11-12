@@ -15,6 +15,7 @@ export class SuperCar extends Vehicle {
     public getSuperCarInfo(): string {
         return `${this.getInfo()} with serial: ${this.getSerial()} - Top Speed: ${this.topSpeed} km/h, Horsepower: ${this.horsepower} hp`;
     }
+    
     // Overloading
     public setTopSpeed(newTopSpeed: number): void;
 
