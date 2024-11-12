@@ -1,6 +1,6 @@
 // Inheritance Demo
 
-// Base class (Parent class)
+// Parent class
 class Animal {
     constructor(public name: string) { }
 
@@ -21,7 +21,7 @@ class Animal {
     }
 }
 
-// Derived class (Child class) that inherits from Animal
+// Child class that inherits from Animal
 class Dog extends Animal {
     // Overiding methods from the parent class
     speak(): void {
@@ -33,7 +33,7 @@ class Dog extends Animal {
     }
 }
 
-// Another derived class (Child class) that inherits from Animal
+// Another child class that inherits from Animal
 class Cat extends Animal {
     // Overiding methods from the parent class
     speak(): void {
@@ -45,7 +45,7 @@ class Cat extends Animal {
     }
 }
 
-// Another derived class (Child class) that inherits from Animal
+// Another child class that inherits from Animal
 class Bird extends Animal {
     // Overiding methods from the parent class
     speak(): void {
@@ -57,22 +57,22 @@ class Bird extends Animal {
     }
 }
 // Creating instances of Dog and Cat
-const dog = new Dog('Rex');
-const cat = new Cat('Whiskers');
-const bird = new Bird('Peter');
+const dog = new Dog('Kiki');
+const cat = new Cat('Sushi');
+const bird = new Bird('Boba');
 
 // Calling the speak method for each instance
-dog.speak(); // Output: Rex barks.
-dog.eat('turkey'); // Output: Rex is eating turkey.
-dog.sleep(5); // Output: Rex is sleeping for 5 hours.
+dog.speak();             // Output: Kiki barks.
+dog.eat('turkey');       // Output: Kiki is eating turkey.
+dog.sleep(5);            // Output: Kiki is sleeping for 5 hours.
 console.log(`Type of animal: ${dog.getType()}\n`) // Output: Type of animal: Dog
 
-cat.speak(); // Output: Whiskers meows.
-cat.eat('tuna'); // Output: Whiskers is eating tuna.
-cat.sleep(3); // Output: Whiskers is sleeping for 3 hours.
+cat.speak();            // Output: Sushi meows.
+cat.eat('tuna');        // Output: Sushi is eating tuna.
+cat.sleep(3);           // Output: Sushi is sleeping for 3 hours.
 console.log(`Type of animal: ${cat.getType()}\n`) // Output: Type of animal: Cat
 
-bird.speak(); // Output: Peter meows.
-bird.eat('seeds'); // Output: Peter is eating seeds.
-bird.sleep(4); // Output: Peter is sleeping for 4 hours.
+bird.speak();           // Output: Boba meows.
+bird.eat('seeds');      // Output: Boba is eating seeds.
+bird.sleep(4);          // Output: Boba is sleeping for 4 hours.
 console.log(`Type of animal: ${bird.getType()}`) // Output: Type of animal: Bird
