@@ -3,7 +3,7 @@ import { Rectangle } from './Rectangle';
 import { Square } from './Square';
 import { Triangle } from './Triangle';
 import { Trapezoid } from './Trapezoid';
-function run() {
+function main() {
     // Initialize instances
     const myCircle = new Circle(5);
     console.log(myCircle.describe());
@@ -22,3 +22,6 @@ function run() {
     const myTrapezoid = new Trapezoid(10, 5, 4, 6, 6);
     console.log(myTrapezoid.describe());
 }
+
+// Execute the main function
+main();
