@@ -15,13 +15,27 @@ export class SuperCar extends Vehicle {
     public getSuperCarInfo(): string {
         return `${this.getInfo()} with serial: ${this.getSerial()} - Top Speed: ${this.topSpeed} km/h, Horsepower: ${this.horsepower} hp`;
     }
+    // Overloading
+    public setTopSpeed(newTopSpeed: number): void;
 
-    // Public method to update top speed (encapsulated)
-    public setTopSpeed(newTopSpeed: number): void {
-        if (newTopSpeed > 0) {
-            this.topSpeed = newTopSpeed; // Update top speed
+    public setTopSpeed(newTopSpeed: string): void;
+
+    public setTopSpeed(newTopSpeed: number | string): void {
+        if (typeof newTopSpeed === 'number') {
+            if (newTopSpeed > 0) {
+                this.topSpeed = newTopSpeed;
+            } else {
+                console.error("Top speed must be positive."); 
+            }
+        } else if (typeof newTopSpeed === 'string') {
+            const parsedSpeed = parseInt(newTopSpeed, 10);
+            if (!isNaN(parsedSpeed) && parsedSpeed > 0) {
+                this.topSpeed = parsedSpeed;
+            } else {
+                console.error("Invalid top speed input. Please provide a valid number.");
+            }
         } else {
-            console.error("Top speed must be positive."); // Log error for invalid input
+            console.error("Invalid top speed input type."); 
         }
     }
 

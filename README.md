@@ -6,18 +6,19 @@
 ```graphql
     OOP_Demo/
     │
-    ├── src_Car/
-    │   ├── main.ts            # Main script to run the demo
-    │   ├── SuperCar.ts        # Contains SuperCar inherited from Vehicle
-    │   └── Vehicle.ts         # Contains Vehicle class
-    ├── src_Geometry/
-    │   ├── main.ts            # Main script to run the demo
-    │   ├── Shape.ts           # Contains the Shape class
-    │   ├── Circle.ts          # Contains the Circle class
-    │   ├── Square.ts          # Contains the Square class 
-    │   ├── Trapezoid.ts       # Contains the Trapezoid class
-    │   ├── Rectangle.ts       # Contains the Rectangle class 
-    │   └── Triangle.ts        # Contains the Triangle class
+    ├── src/
+    │    ├── Car/
+    │    ├──   ├── main.ts            # Main script to run the demo
+    │    │   ├── SuperCar.ts        # Contains SuperCar inherited from Vehicle
+    │    │   └── Vehicle.ts         # Contains Vehicle class
+    │    ├── Geometry/
+    │    │   ├── main.ts            # Main script to run the demo
+    │    │   ├── Shape.ts           # Contains the Shape class
+    │    │   ├── Circle.ts          # Contains the Circle class
+    │    │   ├── Square.ts          # Contains the Square class 
+    │    │   └── Triangle.ts        # Contains the Triangle class
+    │    │   ├── Trapezoid.ts       # Contains the Trapezoid class
+    │    │   ├── Rectangle.ts       # Contains the Rectangle class 
     ├── tsconfig.json          # TypeScript configuration
     └── README.md              # Project documentation
 ```
