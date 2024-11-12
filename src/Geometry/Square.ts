@@ -4,6 +4,9 @@ export class Square extends Shape {
     constructor(private side: number) {
         super();
     }
+    // Overloading
+    calculateArea(): number;
+
     // Implementing the abstract method
     calculateArea(): number {
         return this.side * this.side;

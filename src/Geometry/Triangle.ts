@@ -5,6 +5,10 @@ export class Triangle extends Shape {
         super();
     }
 
+    // Overloading
+    calculateArea(): number;
+    calculateArea(base: number, height: number): number;
+    
     // Implementing the abstract methods
     calculateArea(): number {
         return (this.base * this.height) / 2;
@@ -13,4 +17,5 @@ export class Triangle extends Shape {
     calculatePerimeter(): number {
         return this.base + this.sideA + this.sideB;
     }
+
 }

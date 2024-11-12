@@ -4,6 +4,8 @@ export class Circle extends Shape {
     constructor(private radius: number) {
         super();
     }
+    // Overloading
+    calculateArea(): number;
 
     // Implementing the abstract method
     calculateArea(): number {
