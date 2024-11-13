@@ -28,9 +28,9 @@ function main() {
         1005
     );
     // Displaying information about the supercar
-    console.log(myFerrari.getSuperCarInfo());
-    console.log(myLamborghini.getSuperCarInfo());
-    console.log(myPagani.getSuperCarInfo());
+    console.log(myFerrari.getInfo());
+    console.log(myLamborghini.getInfo());
+    console.log(myPagani.getInfo());
     // Updating the top speed
     myFerrari.setTopSpeed(360);
     console.log(
