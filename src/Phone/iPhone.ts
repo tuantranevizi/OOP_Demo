@@ -9,8 +9,17 @@ export class iPhone extends Phone {
         this.storage = storage;
     }
 
-    public getInfo(): string {
-        return `OS version: ${this.version} ${this.storage}GB`;
+    public call(): string;
+    public call(phoneNumber: string): string;
+    public call(phoneNumber?: string) {
+        if (phoneNumber) {
+            return `Calling ${phoneNumber} on iPhone ${this.version} with ${this.storage}GB storage
+            `
+        }
     }
+    public record(): string ;
 
+    public getInfo(): string {
+        return `${super.getInfo()} OS version: ${this.version} ${this.storage}GB`;
+    }
 }
