@@ -1,7 +1,37 @@
-// Encapsulation Demo
-import { SuperCar } from "./SuperCar";
+// Import from Geometry
+import { Circle } from './src/Geometry/Circle';
+import { Rectangle } from './src/Geometry/Rectangle';
+import { Square } from './src/Geometry/Square';
+import { Triangle } from './src/Geometry/Triangle';
+import { Trapezoid } from './src/Geometry/Trapezoid';
 
-function main() {
+// Import from Car
+import { SuperCar } from "./src/Car/SuperCar";
+
+// Geometry Main
+function geo_test() {
+    // Initialize instances
+    const myCircle = new Circle(5);
+    console.log(myCircle.describe());
+    console.log(`This shape area is: ${myCircle.calculateArea().toFixed(2)}`);
+    console.log(`This shape perimeter is: ${myCircle.calculatePerimeter().toFixed(2)}`);
+
+    const myRectangle = new Rectangle(10, 5);
+    console.log(myRectangle.describe());
+
+    const mySquare = new Square(10);
+    console.log(mySquare.describe());
+
+    const myTriangle = new Triangle(10, 5, 7, 8);
+    console.log(myTriangle.describe());
+
+    const myTrapezoid = new Trapezoid(10, 5, 4, 6, 6);
+    console.log(myTrapezoid.describe());
+}
+
+
+// Car Main
+function car_test() {
     // Creating an instance of SuperCar
     const myFerrari = new SuperCar(
         "Ferrari",
@@ -53,5 +83,10 @@ function main() {
     // console.log(myLamborghini.getSerial()); // This will cause a compilation error
 }
 
-// Execute the main function
-main();
+function main(){
+    // Execute the test functions
+    geo_test();
+    car_test();
+}
+
+main()

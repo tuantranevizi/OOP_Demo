@@ -17,7 +17,14 @@ export class iPhone extends Phone {
             `
         }
     }
+
     public record(): string ;
+    public record(audio: string): string;
+    public record(audio?: string) {
+        if (audio){
+            return `Recording audio on iPhone ${this.version} with ${this.storage}GB storage`
+        }
+    }
 
     public getInfo(): string {
         return `${super.getInfo()} OS version: ${this.version} ${this.storage}GB`;
