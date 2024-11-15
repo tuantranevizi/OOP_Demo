@@ -35,8 +35,6 @@ export class SuperCar extends Vehicle {
             } else {
                 console.error("Invalid top speed input. Please provide a valid number.");
             }
-        } else {
-            console.error("Invalid top speed input type."); 
         }
     }
 
