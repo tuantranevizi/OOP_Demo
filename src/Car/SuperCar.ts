@@ -18,7 +18,6 @@ export class SuperCar extends Vehicle {
     
     // Overloading
     public setTopSpeed(newTopSpeed: number): void;
-
     public setTopSpeed(newTopSpeed: string): void;
 
     public setTopSpeed(newTopSpeed: number | string): void {

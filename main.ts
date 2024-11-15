@@ -13,8 +13,6 @@ function geo_test() {
     // Initialize instances
     const myCircle = new Circle(5);
     console.log(myCircle.describe());
-    console.log(`This shape area is: ${myCircle.calculateArea().toFixed(2)}`);
-    console.log(`This shape perimeter is: ${myCircle.calculatePerimeter().toFixed(2)}`);
 
     const myRectangle = new Rectangle(10, 5);
     console.log(myRectangle.describe());
@@ -27,6 +25,11 @@ function geo_test() {
 
     const myTrapezoid = new Trapezoid(10, 5, 4, 6, 6);
     console.log(myTrapezoid.describe());
+
+    console.log("--------------------------------------------------------------------------------------------------------------------");
+    console.log("### Test Geometry Overloading: ###")
+    console.log("Uses the instance's base and height (25):", myTriangle.calculateArea()); 
+    console.log("Uses the provided base and height (36):",myTriangle.calculateArea(6, 12)); 
 }
 
 
@@ -85,7 +88,10 @@ function car_test() {
 
 function main(){
     // Execute the test functions
+    console.log("Geometry:")
     geo_test();
+    console.log("--------------------------------------------------------------------------------------------------------------------");
+    console.log("Car:")
     car_test();
 }
 

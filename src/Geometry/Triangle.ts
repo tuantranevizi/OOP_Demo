@@ -5,17 +5,29 @@ export class Triangle extends Shape {
         super();
     }
 
-    // Overloading
+    // Overloading for calculateArea
     calculateArea(): number;
-    calculateArea(base: number, height: number): number;
-    
-    // Implementing the abstract methods
-    calculateArea(): number {
-        return (this.base * this.height) / 2;
+    calculateArea(base: number, height: number): number; 
+    // Implementing the calculateArea method
+    calculateArea(base?: number, height?: number): number {
+        const b = base !== undefined ? base : this.base;
+        const h = height !== undefined ? height : this.height;
+        return (b * h) / 2;
     }
 
-    calculatePerimeter(): number {
-        return this.base + this.sideA + this.sideB;
+    // Overloading for calculatePerimeter
+    calculatePerimeter(): number; 
+    calculatePerimeter(sideA: number, sideB: number, base: number): number;
+    // Implementing the calculatePerimeter method
+    calculatePerimeter(sideA?: number, sideB?: number, base?: number): number {
+        const a = sideA !== undefined ? sideA : this.sideA;
+        const b = sideB !== undefined ? sideB : this.sideB;
+        const baseLength = base !== undefined ? base : this.base;
+        return a + b + baseLength;
     }
 
+    // Overriding
+    describe(): string {
+        return `This Triangle has an area of ${this.calculateArea()} and a Perimeter of ${this.calculatePerimeter()}`
+    }
 }

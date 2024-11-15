@@ -4,8 +4,6 @@ export class Square extends Shape {
     constructor(private side: number) {
         super();
     }
-    // Overloading
-    calculateArea(): number;
 
     // Implementing the abstract method
     calculateArea(): number {
@@ -14,5 +12,10 @@ export class Square extends Shape {
 
     calculatePerimeter(): number {
         return this.side * 4;
+    }
+
+    // Overriding
+    describe(): string {
+        return `This Square has an area of ${this.calculateArea()} and a Perimeter of ${this.calculatePerimeter()}`
     }
 }
